@@ -1,0 +1,12 @@
+memcached:
+  build: memcached
+  ports:
+    - "11211"
+  environment:
+    MYSQL_PASSWORD: 'test'
+apache:
+  build: apache2
+  ports:
+    - "80"
+  links:
+    - memcached

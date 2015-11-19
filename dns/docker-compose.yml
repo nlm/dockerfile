@@ -1,0 +1,6 @@
+unbound:
+  build: unbound
+  ports:
+    - '53/tcp'
+    - '53/udp'
+    - '54'
